@@ -1,6 +1,21 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Layout() {
+  const [mousePos, setMousePos] = useState<any>({});
+
+  useEffect(() => {
+    const handleMouseMove = (event: any) => {
+      setMousePos({ x: event.clientX, y: event.clientY });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
   return (
     <div className="bg-[#293448] p-4">
       <div className="bg-[#091A2E]  m-auto w-[1280px] rounded-2xl">
@@ -18,6 +33,37 @@ export default function Layout() {
             <p className="mx-3">Projects</p>
           </div>
         </div>
+
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 9999,
+            pointerEvents: "none",
+          }}
+        >
+          <svg
+            width={50}
+            height={50}
+            style={{
+              opacity: 0.2,
+              boxShadow: "23px 23px 450px 100px blue",
+              width: "10px",
+              height: "10px",
+              background: "",
+              borderRadius: "100px",
+
+              position: "absolute",
+              left: mousePos?.x,
+              top: mousePos?.y,
+              transform: "translate(-50%, -50%)",
+            }}
+          ></svg>
+        </div>
+
         {
           // main
         }
