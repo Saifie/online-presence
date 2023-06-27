@@ -69,14 +69,6 @@ export default function Layout() {
               when the focus is meant to be on design, not content.
             </p>
           </div>
-          {/**
-          <div>
-            <img
-              className="w-[350px] h-[350px]"
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-            />
-          </div>
-        */}
         </div>
         <div className="mt-20"> xx</div>
       </div>
