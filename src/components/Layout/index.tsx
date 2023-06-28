@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useSpring, animated } from "@react-spring/web";
+import { useSpring, animated, useTransition } from "@react-spring/web";
 
 export default function Layout() {
   const [mousePos, setMousePos] = useState<any>({});
@@ -21,18 +21,21 @@ export default function Layout() {
   const styles = useSpring({
     opacity: 1,
     from: { opacity: 0 },
-    config: {
-      mass: 4.7,
-      tension: 170,
-      friction: 120,
-      precision: 0.3,
-      velocity: 0,
+    config: { duration: 2000 },
+  });
+  const styles2 = useSpring({
+    opacity: 1,
+    from: { width: "100%", background: "transparent" },
+    to: {
+      width: "90%",
+      background: "transparent",
     },
+    config: { duration: 3000 },
   });
 
   function renderText(): any {
     if (activeTab == "system") {
-      return [
+      let dataSys = [
         "working as consultant development at systems limited.",
         "working on react , react router , tailwind CSS etc.",
         "Developing and implementing highly responsive user interface components using react concepts",
@@ -51,7 +54,9 @@ export default function Layout() {
         " Documenting application changes and developing updates.",
         "working on vite instead web packs as vite is able to process your development build faster than Webpack",
         "working on typescript as vite has out of box support for typescript",
-      ].map((item: any) => (
+      ];
+
+      return dataSys.map((item: any) => (
         <p className="m-1" key={item}>
           <span className="mr-4 text-[#5EEAD4]">.</span>
           {item}
@@ -155,7 +160,7 @@ export default function Layout() {
         {
           // main
         }
-        <div className="ml-40 mt-40 flex relative ">
+        <animated.div style={styles2} className="ml-40 mt-40 flex relative ">
           <div className="bg- w-[80%]">
             <p className="text-[#5EEAD4] text-md">HI, my name is</p>
             <p className="text-[#B3BACD] text-[50px] font-serif my-4">
@@ -192,7 +197,7 @@ export default function Layout() {
               className="ml-4"
             />
           </div>
-        </div>
+        </animated.div>
         {
           // ABOUT ME
         }
@@ -225,7 +230,13 @@ export default function Layout() {
           </div>
         </div>
         <div className="mt-40 mx-40 text-[#B3BACD]">
-          <h1 className=" text-[35px] uppercase"> where I've worked </h1>
+          <div className="neon">
+            <h1 className=" text-[35px] uppercase">
+              {" "}
+              <span>where</span> I've worked{" "}
+            </h1>
+          </div>
+
           <div className="border-t-[1px] border-slate-700 mb-10	"></div>
 
           <div className={` `}>

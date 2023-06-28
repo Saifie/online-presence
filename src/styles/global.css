@@ -48,3 +48,43 @@ body {
 .big {
   font-size: 200%;
 }
+
+
+.neon {
+  display: inline-block;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  color:#333;
+  text-shadow: 0 0 10px #5EEAD4, 0 4px  20px #5EEAD4, 0 4px 3px #5EEAD4, 0 0 4px #5EEAD4,
+    0 0 7px #5EEAD4, 0 0 8px #5EEAD4, 0 0 7px #5EEAD4, 0 0 15px #5EEAD4;
+}
+
+.neon span {
+  animation: flicker 4s infinite;
+}
+
+@keyframes flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    text-shadow: 0 0 10px #333, 0 0 2px #333, 0 0 3px #333, 0 0 4px #5EEAD4,
+      0 0 3px #5EEAD4, 0 5px 8px #5EEAD4, 0 4px 10px #5EEAD4, 0 0 15px #5EEAD4;
+      color:#5EEAD4;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  71%,
+  100% {
+    text-shadow: none;
+  }
+}
