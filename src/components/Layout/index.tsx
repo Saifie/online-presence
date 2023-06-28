@@ -52,7 +52,7 @@ export default function Layout() {
         "working on vite instead web packs as vite is able to process your development build faster than Webpack",
         "working on typescript as vite has out of box support for typescript",
       ].map((item: any) => (
-        <p className="m-1">
+        <p className="m-1" key={item}>
           <span className="mr-4 text-[#5EEAD4]">.</span>
           {item}
         </p>
@@ -69,7 +69,7 @@ export default function Layout() {
             "Writing end to end testing script for react project using cypress.",
             "Optimization of over using react hooks and using better coding approaches.",
           ].map((item: any) => (
-            <p className="m-1">
+            <p className="m-1" key={item}>
               <span className="mr-4 text-[#5EEAD4]">.</span>
               {item}
             </p>
@@ -88,7 +88,7 @@ export default function Layout() {
             "Writing end to end testing script for react project using cypress.",
             "Optimization of over using react hooks and using better coding approaches.",
           ].map((item: any) => (
-            <p className="m-1">
+            <p className="m-1" key={item}>
               <span className="mr-4 text-[#5EEAD4]">.</span>
               {item}
             </p>
@@ -160,7 +160,10 @@ export default function Layout() {
             <p className="text-[#5EEAD4] text-md">HI, my name is</p>
             <p className="text-[#B3BACD] text-[50px] font-serif my-4">
               {"SAIFULLAH KHAN".split("").map((item: any) => (
-                <span className="text hover:text-[#5EEAD4] hover:text-[60px]">
+                <span
+                  key={item}
+                  className="text hover:text-[#5EEAD4] hover:text-[60px]"
+                >
                   {item}
                 </span>
               ))}
