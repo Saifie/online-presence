@@ -29,3 +29,22 @@ body {
   border-radius: 80%;
   backface-visibility: hidden;
 }
+
+.underlined {
+  position: relative;
+  margin-right: 1rem;
+}
+.underlined:after {
+  content: "";
+  content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    
+}
+.small {
+  font-size: 50%;
+}
+.big {
+  font-size: 200%;
+}
