@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { animated, useSpring } from "@react-spring/web";
+import { useSpring, animated } from "@react-spring/web";
 
 export default function Layout() {
   const [mousePos, setMousePos] = useState<any>({});
