@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+ 
+    --bermuda: #39BCF8;
+    --greenish: #5EEAD4;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -58,8 +66,8 @@ body {
   font-size: 4rem;
   letter-spacing: 3px;
   color:#333;
-  text-shadow: 0 0 10px #5EEAD4, 0 4px  20px #5EEAD4, 0 4px 3px #5EEAD4, 0 0 4px #5EEAD4,
-    0 0 7px #5EEAD4, 0 0 8px #5EEAD4, 0 0 7px #5EEAD4, 0 0 15px #5EEAD4;
+  text-shadow: 0 0 10px var(--bermuda), 0 4px  20px var(--bermuda), 0 4px 3px var(--bermuda), 0 0 4px var(--bermuda),
+    0 0 7px var(--bermuda), 0 0 8px var(--bermuda), 0 0 7px var(--bermuda), 0 0 15px var(--bermuda);
 }
 
 .neon span {
@@ -75,9 +83,9 @@ body {
   64.999%,
   70%,
   100% {
-    text-shadow: 0 0 10px #333, 0 0 2px #333, 0 0 3px #333, 0 0 4px #5EEAD4,
-      0 0 3px #5EEAD4, 0 5px 8px #5EEAD4, 0 4px 10px #5EEAD4, 0 0 15px #5EEAD4;
-      color:#5EEAD4;
+    text-shadow: 0 0 10px #333, 0 0 2px #333, 0 0 3px #333, 0 0 4px var(--bermuda),
+      0 0 3px var(--bermuda), 0 5px 8px var(--bermuda), 0 4px 10px var(--bermuda), 0 0 15px var(--bermuda);
+      color:var(--bermuda);
   }
   20%,
   21.999%,
@@ -87,4 +95,11 @@ body {
   100% {
     text-shadow: none;
   }
+}
+
+.cus-mono{
+  font-family: 'Montserrat', sans-serif;
+}
+.cus-robo{
+  font-family: 'Roboto', sans-serif;
 }
