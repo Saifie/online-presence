@@ -586,7 +586,9 @@ export default function Layout() {
       <div className="fixed flex flex-col text-white top-[450px] right-[-70px]">
         <p id="emailId" className="rotate-90 cus-sf	text-[#B3BACD]">
           {"saifiekhan@icloud.com".split("").map((item: any) => (
-            <span className="m-[1px] text-sm">{item}</span>
+            <span key={item} className="m-[1px] text-sm">
+              {item}
+            </span>
           ))}
         </p>
       </div>
