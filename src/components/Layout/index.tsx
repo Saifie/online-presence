@@ -199,8 +199,8 @@ export default function Layout() {
   }
 
   return (
-    <div className="bg-[#293448] p-4 ">
-      <div className="bg-[#091A2E]  m-auto w-[1280px] rounded-2xl">
+    <div className="bg-[#293448] p-4 relative ">
+      <div className="bg-[#091A2E]  m-auto w-[1280px] rounded-2xl overflow-scroll">
         {
           // navebar
         }
@@ -256,22 +256,22 @@ export default function Layout() {
           // main
         }
         <animated.div style={styles2} className="ml-40 mt-32 flex relative ">
-          <div className="bg- w-[80%]">
+          <div className="bg- w-[80%] relative">
             <p className="text-bermuda text-md">HI, my name is</p>
-            <p className="text-[#B3BACD] text-[70px] font-serif my-4">
-              {"SAIFULLAH KHAN ".split("").map((item: any) => (
+            <p className="text-[#B3BACD] text-[70px] font-serif  absolute">
+              {"Saifullah Khan ".split("").map((item: any) => (
                 <span
                   key={item}
-                  className="text font-bold  hover:text-bermuda hover:text-[80px]"
+                  className="text-white cursor-pointer font-bold mx-1 hover:text-bermuda hover:scale-125"
                 >
                   {item}
                 </span>
               ))}
             </p>
-            <p className=" mb-2 text-[#B3BACD]  text-[50px] font-serif">
-              I build things for web.
+            <p className="mt-24 mb-6 text-[#B3BACD]  text-[45px] font-serif">
+              I develop applications for web.
             </p>
-            <p className="w-[70%]  text-[#B3BACD] text-normal">
+            <p className="w-[70%]  text-[#B3BACD] text-normal font-sans">
               The purpose of lorem ipsum is to create a natural looking block of
               text (sentence, paragraph, page, etc.) that doesn't distract from
               the layout. A practice not without{" "}
@@ -279,7 +279,7 @@ export default function Layout() {
               pages with meaningless filler text can be very useful when the
               focus is meant to be on design, not content.
             </p>
-            <button className="px-5 py-3 my-5 mt-10 text-xs text-bermuda border-2 border-bermuda">
+            <button className="transition-all px-5 py-3 my-5 mt-10 text-xs text-bermuda border-2 shadow-md	 border-bermuda hover:shadow-bermuda hover:translate-y-[-5px] hover:translate-x-[-5px]">
               Get in Touch
             </button>
           </div>
@@ -298,33 +298,96 @@ export default function Layout() {
         }
         <div className="mx-40  my-20">
           <div>
-            <div className="neon">
-              <h1 className="text-[35px] my-5 text-[#222]">About Me</h1>
+            <div className="neonMod">
+              <h1 className="text-[25px] my-5 text-[#222]">About Me</h1>
             </div>
 
-            <p className="w-3/4  text-[#B3BACD] text-md">
-              The purpose of lorem ipsum is to create a natural looking block of
-              text (sentence, paragraph, page, etc.) that doesn't distract from
-              the layout. A practice not without{" "}
-              <span className="text-bermuda">
-                controversy and there is more over
+            <p className="w-3/4  text-[#8892B0] text-md font-sans">
+              Hey Welcome! I'M Full Stack Developer. I'M currently working as
+              <span className="text-bermuda ">
+                {" "}
+                consultant development at systems limited.
               </span>
-              , laying out pages with meaningless filler text can be very useful
-              when the focus is meant to be on design, not content.
-            </p>
-            <p className="text-[#B3BACD] text-md">
-              laying out pages with meaningless filler text ca
-            </p>
-            <p className="w-3/4 mt-3  text-[#B3BACD] text-md">
-              The purpose of lorem ipsum is to create a natural looking block of
-              text (sentence, paragraph, page, etc.) that doesn't distract from
-              the layout. A practice not without{" "}
+              I have over 5 years of experienced working with different
+              technologies like React ,Node , Vue JS etc with different
+              companies and freelancing projects as{" "}
               <span className="text-bermuda">
-                controversy and there is more over
-              </span>
-              , laying out pages with meaningless filler text can be very useful
-              when the focus is meant to be on design, not content.
+                {" "}
+                Frontend and full stack developer
+              </span>{" "}
+              . my experienced includes technology like Reactjs, vue js, node ,
+              express js ,java, data science,django,saas, firebase,docker,
+              kubernetes,skaffold, vagrant etc.
             </p>
+            <p className="my-4 text-[#8892B0]">
+              Technologies I’ve been working with recently:
+            </p>
+            <div className=" text-[#8892B0] flex justify-between items-center w-80 text-xs ">
+              <div>
+                <p className=" my-3">
+                  {" "}
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  JavaScript (ES6+)
+                </p>
+                <p className=" my-3">
+                  {" "}
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Node JS
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Django
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Docker
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Git
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  C++/java/python
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Ds/alogs
+                </p>
+              </div>
+              <div>
+                <p className=" my-3">
+                  {" "}
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  TypeScript
+                </p>
+                <p className=" my-3">
+                  {" "}
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  React JS
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Next JS
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Microsoft Azure
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Firebase
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Competitive programming
+                </p>
+                <p className=" my-3">
+                  <span className="mr-2  mt-1 text-xs text-bermuda">✓</span>
+                  Dynamic programming
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="mt-40 mx-40 text-[#B3BACD]">
@@ -414,12 +477,121 @@ export default function Layout() {
               <div className=" transition-all ease-in font-serif	flex-1 cursor-pointer">
                 <animated.div style={styles}>
                   {" "}
-                  <div className="text-[#8892B0]">{renderText()}</div>
+                  <div className="text-[#8892B0] font-sans">{renderText()}</div>
                 </animated.div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div className="fixed text-white bottom-2 cursor-pointer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon-tabler icon-tabler-brand-github m-6 mb-8"
+          width="23"
+          height="23"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="#B3BACD"
+          fill="none"
+          id="github-icon"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          {" "}
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />{" "}
+          <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />{" "}
+        </svg>
+        {/***
+     
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          stroke="#B3BACD"
+          fill="none"
+          id="github-icon"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          className="m-4"
+        >
+          {" "}
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+        </svg>
+     */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          stroke="#B3BACD"
+          fill="none"
+          id="github-icon"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          className="m-6"
+          stroke-linejoin="round"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <path d="M18 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h5M15 3h6v6M10 14L20.2 3.8" />
+          </g>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          stroke="#B3BACD"
+          fill="none"
+          id="github-icon"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="m-6"
+        >
+          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          stroke="#B3BACD"
+          fill="none"
+          id="github-icon"
+          className="m-6"
+        >
+          <path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98zm6.44-3.77a1.4 1.4 0 1 1 0 2.8 1.4 1.4 0 0 1 0-2.8z" />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="22"
+          height="22"
+          stroke="#B3BACD"
+          fill="none"
+          id="github-icon"
+          className="m-6"
+        >
+          {" "}
+          <g>
+            {" "}
+            <path d="M12 9.55C12.917 8.613 14.111 8 15.5 8a5.5 5.5 0 0 1 5.5 5.5V21h-2v-7.5a3.5 3.5 0 0 0-7 0V21h-2V8.5h2v1.05zM5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-1 2h2V21H4V8.5z" />{" "}
+          </g>{" "}
+        </svg>
+        <div className="h-[80px]  mt-4 ml-8 border-l-2 border-l-[#8892B0] "></div>
+      </div>
+      <div className="fixed flex flex-col text-white top-[450px] right-[-70px]">
+        <p id="emailId" className="rotate-90 cus-sf	text-[#B3BACD]">
+          {"saifiekhan@icloud.com".split("").map((item: any) => (
+            <span className="m-[1px] text-sm">{item}</span>
+          ))}
+        </p>
+      </div>
+      <div className="fixed flex flex-col text-white bottom-3 right-10">
+        <div className="h-[80px] ml-4 border-l-2 border-l-[#8892B0] "></div>
       </div>
     </div>
   );

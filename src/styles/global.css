@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -25,6 +25,7 @@
 }
 
 body {
+background-color: #293448;
 }
 .circle {
   position: absolute;
@@ -66,8 +67,19 @@ body {
   font-size: 4rem;
   letter-spacing: 3px;
   color:#333;
-  text-shadow: 0 0 10px var(--bermuda), 0 4px  20px var(--bermuda), 0 4px 3px var(--bermuda), 0 0 4px var(--bermuda),
-    0 0 7px var(--bermuda), 0 0 8px var(--bermuda), 0 0 7px var(--bermuda), 0 0 15px var(--bermuda);
+  text-shadow: 0 0 10px var(--bermuda), 0 4px  2px var(--bermuda), 0 4px 3px var(--bermuda), 0 0 4px var(--bermuda),
+    0 0 7px var(--bermuda), 0 0 8px var(--bermuda), 0 0 7px var(--bermuda), 0 0 6px var(--bermuda);
+}
+.neonMod {
+  display: inline-block;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  color:#333;
+  text-shadow: 0 0 10px var(--bermuda), 0 4px  2px var(--bermuda), 0 4px 3px var(--bermuda), 0 0 4px var(--bermuda),
+    0 0 7px var(--bermuda), 0 0 8px var(--bermuda), 0 0 7px var(--bermuda), 0 0 6px var(--bermuda);
 }
 
 .neon span {
@@ -102,4 +114,30 @@ body {
 }
 .cus-robo{
   font-family: 'Roboto', sans-serif;
+}
+.cus-sf{
+  font-family: 'Space Mono', monospace;
+}
+.boxShadow{
+box-shadow: 0  5px 10px var(--bermuda) ;
+}
+
+#github-icon:hover{
+stroke: var(--bermuda);
+transform: translate(-5px,-5px);
+transition: all 0.3s ease-in-out;
+cursor: pointer;
+}
+
+#emailId:hover{
+  color: var(--bermuda);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.1) rotate(90deg);;
+  font-weight: 700;
+
+
+
+
+
 }
